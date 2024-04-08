@@ -139,7 +139,7 @@ if (verifyForm.length) {
 }
 
 // home page
-function displayAlert(title) {
+function displayAlert(title, callback) {
     Swal.fire({
         title: title,
         showClass: {
@@ -150,6 +150,11 @@ function displayAlert(title) {
         confirmButtonClass: 'btn btn-primary',
         buttonsStyling: false
     })
+    .then((result) => {
+        if (result.isConfirmed && callback) {
+            callback();
+        }
+    });
 }
 
 function display(title, icon, callback) {
@@ -822,11 +827,11 @@ if (contactForm.length) {
 
         emailjs.send("service_pdf1eel", "template_dwgd35r", parms)
             .then(res => {
-                displayAlert('Message Sent Successfully!')
+                displayAlert('Message Sent Successfully!', ()=>{ location.reload() })
             })
             .catch(error => {
                 console.error("Error sending email:", error);
-                displayAlert('An error occurred while sending the message.Please try again later.');
+                displayAlert('An error occurred while sending the message.Please try again later.', ()=>{ location.reload() });
             });
     }
 }

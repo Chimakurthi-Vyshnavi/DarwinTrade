@@ -9,3 +9,4 @@ constants
 config.ts
 public/push-notifications.*
 public/firebase-messaging-sw.*
+
