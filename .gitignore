@@ -1,0 +1,11 @@
+.env
+node_modules
+coverage
+.vscode
+.nyc_output
+tests
+constants
+
+config.ts
+public/push-notifications.*
+public/firebase-messaging-sw.*

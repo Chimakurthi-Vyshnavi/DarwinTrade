@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DarwinTrade</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <base href="/">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__option">
+            <div class="offcanvas__links">
+                <a href="#">Sign in</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="offcanvas__top__hover">
+                <span>Usd <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>USD</li>
+                    <li>EUR</li>
+                    <li>USD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas__nav__option">
+            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+            <a href="#"><img src="img/icon/heart.png" alt=""></a>
+            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+            <div class="price">$0.00</div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="">
+                            <img src="img/logo.png" style="position: relative; left:-40px;" alt="">
+
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu" style="margin-top: 30px;">
+                        <ul>
+                            <li class="active menu_toggler" data-filter="home"><a>Home</a></li>
+                            <li class="menu_toggler" data-filter="shop"><a>Shop</a></li>
+                            <li class="menu_toggler" data-filter="cart"><a>Cart</a></li>
+                            <li class="menu_toggler" data-filter="about"><a>About</a></li>
+                            <li class="menu_toggler" data-filter="contact"><a>Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option" style="margin-top: 30px; margin-left: -21px;">
+                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                                src="img/icon/user.png" height=27 width=25 style="margin-right: 3px;" alt=""></a>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">My Profile</h5>
+                                    </div>
+                                    <style>
+                                        .menu_toggler a {
+                                            cursor: pointer;
+                                        }
+
+                                        .card1 {
+                                            width: 350px;
+                                            background-color: #efefef;
+                                            border: none;
+                                            cursor: pointer;
+                                            transition: all 0.5s;
+                                        }
+
+                                        .image img {
+                                            transition: all 0.5s
+                                        }
+
+                                        .card:hover .image img {
+                                            transform: scale(1.5)
+                                        }
+
+                                        .btn {
+                                            height: 140px;
+                                            width: 140px;
+                                            border-radius: 50%
+                                        }
+
+                                        .name {
+                                            font-size: 22px;
+                                            font-weight: bold
+                                        }
+
+                                        .idd {
+                                            font-size: 14px;
+                                            font-weight: 600
+                                        }
+
+                                        .idd1 {
+                                            font-size: 12px
+                                        }
+
+                                        .number {
+                                            font-size: 22px;
+                                            font-weight: bold
+                                        }
+
+                                        .follow {
+                                            font-size: 12px;
+                                            font-weight: 500;
+                                            color: #444444
+                                        }
+
+                                        .btn1 {
+                                            height: 40px;
+                                            width: 150px;
+                                            border: none;
+                                            background-color: #000;
+                                            color: #aeaeae;
+                                            font-size: 15px
+                                        }
+
+                                        .text span {
+                                            font-size: 13px;
+                                            color: #545454;
+                                            font-weight: 500
+                                        }
+
+                                        .icons i {
+                                            font-size: 19px;
+                                            padding-right: 5px;
+                                        }
+
+                                        hr .new1 {
+                                            border: 1px solid
+                                        }
+
+                                        .join {
+                                            font-size: 14px;
+                                            color: #a0a0a0;
+                                            font-weight: bold
+                                        }
+
+                                        .date {
+                                            background-color: #ccc
+                                        }
+
+                                        .swal2-popup {
+                                            width: 500px;
+                                            height: 200px;
+                                            border-radius: 0;
+                                        }
+
+                                        .swal2-title {
+                                            text-align: center;
+                                            margin-top: 40px;
+                                            color: #040404;
+                                            font-family: "Nunito Sans", sans-serif;
+                                            font-size: 27px;
+                                        }
+
+                                        .swal2-content {
+                                            text-align: center;
+                                        }
+
+                                        .swal2-confirm {
+                                            border: none;
+                                            height: 40px;
+                                            width: 100px;
+                                            background-color: #000;
+                                            color: #aeaeae;
+                                            font-size: 15px;
+                                            padding: 10px 20px;
+                                            cursor: pointer;
+                                        }
+
+                                        .custom-container {
+                                            background-color: #fff;
+                                            border-radius: 0;
+                                        }
+
+                                        .custom-container .swal2-popup {
+                                            width: 500px;
+                                            height: auto;
+                                            border-radius: 0;
+                                        }
+
+                                        .custom-container .swal2-title {
+                                            text-align: center;
+                                            margin-top: 20px;
+                                            color: #040404;
+                                            font-family: "Nunito Sans", sans-serif;
+                                            font-size: 27px;
+                                        }
+
+                                        .custom-container .swal2-content {
+                                            text-align: center;
+                                        }
+
+                                        .custom-container .swal2-confirm {
+                                            background-color: #000;
+                                            color: #aeaeae;
+                                            border: none;
+                                            height: 40px;
+                                            width: 100px;
+                                            font-size: 15px;
+                                            padding: 10px 20px;
+                                            cursor: pointer;
+                                        }
+                                    </style>
+                                    <div class="modal-body">
+                                        <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+                                            <div class="card1 p-4">
+                                                <div
+                                                    class=" image d-flex flex-column justify-content-center align-items-center">
+                                                    <button class="btn btn-secondary"> <img
+                                                            src="<%= employee.thumbnail%>" height="100"
+                                                            width="100" /></button> <span class="name mt-3">
+                                                        <%= employee.name.first%>
+                                                            <%= employee.name.last%>
+                                                    </span> <span class="idd">
+                                                        <%= employee.email%>
+                                                    </span>
+                                                    <div
+                                                        class="d-flex flex-row justify-content-center align-items-center gap-2">
+                                                        <span class="idd1">
+                                                            <%= employee.employeeID%>
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex flex-row justify-content-center align-items-center mt-3">
+                                                        <strong><span class="number">
+                                                                <%= employee.points %><span class="follow">
+                                                                        Points</span>
+                                                            </span></strong>
+                                                    </div>
+                                                    <div class=" d-flex mt-2"> <button
+                                                            class="btn1 btn-dark menu_toggler" data-filter="orders">
+                                                            My Orders</button> </div>
+                                                    <div class="text mt-3"> <span> <strong>Department:</strong>
+                                                            <%= employee.department%>
+                                                        </span> </div>
+                                                    <div
+                                                        class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">
+                                                        <span><i class="fa-brands fa-twitter"></i></span> <span><i
+                                                                class="fa-brands fa-facebook-f"></i></span> <span><i
+                                                                class="fa-brands fa-instagram"></i></span> <span><i
+                                                                class="fa-brands fa-linkedin"></i></span>
+                                                    </div>
+
+                                                    <div class=" px-2 rounded mt-4 date "> <span class="join">Joined
+                                                            <% const dateString=employee.hiredOn 
+                                                                const date=new Date(dateString) 
+                                                                const month=date.toLocaleString('en-US', {month:'long'}) 
+                                                                const year=date.getFullYear(); %>
+                                                                <%= month %>, <%= year %>
+                                                        </span> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <i id="notificationBell" class="fa-regular fa-bell" width="20px" height="25px"
+                            style="color: #4e4f50; font-size: 22px; margin-right: 20px;">
+                            <span id="notificationCount" data-count="0"></span>
+                        </i>
+
+                        <a style="cursor: pointer;" class="menu_toggler" data-filter="wishlist"><img
+                                src="img/icon/heart.png" height=20 width=20 style="margin-right: 3px;" alt="">
+                            <span></span></a>
+                        <a style="cursor: pointer;" class="menu_toggler" data-filter="checkout"><img
+                                src="img/icon/co.png" height=25 width=25 style="margin-right: 3px;" alt="">
+                            <span></span></a>
+                        <a style="cursor: pointer;" class="menu_toggler" data-filter="logout"><img
+                                src="img/icon/logout.png" height=20 width=17 style="margin-right: 3px;" alt="">
+                            <span></span></a>
+                        <% if(employee.roles.includes('admin')) {%>
+                            <a style="cursor: pointer;" class="menu_toggler" data-filter="admin"><img
+                                    src="img/icon/slider-icon.png" class='text-black' height=20 width=17
+                                    style="margin-right: 3px;" alt=""> <span></span></a>
+                            <%}%>
+
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+        <script>
+            const notificationBell = document.getElementById('notificationBell');
+            const notificationCountSpan = document.getElementById('notificationCount');
+            const socket = io();
+            socket.on('new-product', (data) => {
+                const notificationCount = parseInt(notificationCountSpan.dataset.count) + 1;
+                notificationCountSpan.dataset.count = notificationCount;
+                notificationCountSpan.textContent = notificationCount;
+                notificationCountSpan.style.display = 'block';
+                notificationCountSpan.innerText = notificationCount;
+                notificationBell.style.color = 'red';
+            });
+        </script>
+    </header>
+    
+    <!-- Header Section End -->
