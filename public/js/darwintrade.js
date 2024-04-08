@@ -467,7 +467,7 @@ tags.forEach(tag => {
     })
 })
 
-async function sort() {
+$("#sort").change(async()=>{
     try {
         const option = document.getElementById("sort").value
         if (category_selected == '*') {
@@ -486,7 +486,8 @@ async function sort() {
     } catch (error) {
         display(`Server is Busy.<br> Please try again later.`, 'warning')
     }
-}
+
+})
 
 function loadItem() {
     let beginGet = limit * (thisPage - 1);
