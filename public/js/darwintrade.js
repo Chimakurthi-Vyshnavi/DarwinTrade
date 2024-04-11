@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 });
 
-if (window.location.href == `http://localhost:${window.location.port}/shop`) {
+if (window.location.href.endsWith(`${window.location.port}/shop`)) {
     async function displayAllProducts() {
         try {
             var res = await fetch(`/products/sort/1`)
