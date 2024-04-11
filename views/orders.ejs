@@ -32,7 +32,7 @@
                         </thead>
                         <tbody>
                             <% if (orders.length > 0) { %>
-                                <% orders.forEach(order => { %>
+                                <% orders.sort((a, b) => new Date(b.placedAt) - new Date(a.placedAt)).forEach(order => { %>
                                     <% order.items.forEach(item => { %>
                                         <tr>
                                             <td class="product__cart__item">

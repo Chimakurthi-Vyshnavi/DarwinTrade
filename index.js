@@ -86,9 +86,9 @@ app.use(adminRoutes)
 app.use(vendorRoutes)
 
 
-const app1 =  admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+// const app1 =  admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
 
 // app.post('/sendNotification', (req, res) =>{
 //     const { data, token } = req.body;

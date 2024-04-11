@@ -39,5 +39,5 @@ const uploadToS3 = async (file) => {
 
 const mulUpload = upload.fields([{ name: 'thumbnail' }, { name: 'images', maxCount: 5 }]);
  
-module.exports = { uploadToS3, mulUpload, s3Client };
+module.exports = { uploadToS3, mulUpload };
  
