@@ -35,6 +35,9 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
   },
+  "nyc":{
+    "exclude":[]
+  },
   "name": "miniproject",
   "version": "1.0.0",
   "main": "index.js",

@@ -179,13 +179,17 @@ function display(title, icon, callback) {
 
 $('.product__item__pic').on('click', function () {
     product_selected = $(this).attr('id')
+    console.log(product_selected)
     $.ajax({
-        url: `/products/${product_selected}`,
+        url: `/wishlist/products/${product_selected}`,
         method: 'GET',
         success: function (response) {
-            location.assign(`/products/${product_selected}`)
+            console.log(response)
+            location.assign(`/products/${1}`)
         },
-        error: function (xhr, status, error) {display(`Cannot get product details page.<br> Please try again later`, 'error') }
+        error: function (xhr, status, error) {
+            console.log(JSON.parse(xhr.responseText))
+            display(`Cannot get product details page.<br> Please try again later`, 'error') }
     });
 })
 

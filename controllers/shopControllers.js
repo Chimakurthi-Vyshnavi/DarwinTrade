@@ -178,3 +178,14 @@ module.exports.postWishlistRemove = async (req, res) => {
     res.status(400).json({ success: false, message: 'Failed to remove product from wishlist' });
   }
 };
+
+module.exports.getWishlistProduct = async(req, res) => {
+  try {
+    const product = await ProductSchema.dummyProduct.findById(req.params.id)
+    if (!product) throw new Error('Product Not Found')
+    res.render('product', { product: [product] })
+  } catch (error) {
+    console.error(error.message);
+    res.status(400).json({ success: false, message: error.message });
+  }
+}

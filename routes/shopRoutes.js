@@ -12,6 +12,7 @@ router.get("/products/tag/:tag_name/sort/:option", requireAuth, checkEmployee, s
 router.get("/products/:id", requireAuth, checkEmployee, shopControllers.getProductDetails)
 router.post("/search", requireAuth, checkEmployee, shopControllers.postSearch)
 router.get("/wishlist", requireAuth, checkEmployee, shopControllers.getWishlist)
+router.get("/wishlist/products/:id", requireAuth, checkEmployee, shopControllers.getWishlistProduct)
 router.get('/wishlist/check/:productId', requireAuth, shopControllers.checkProductInWishlist);
 router.post("/wishlistadd", requireAuth, shopControllers.postWishlistAdd)
 router.post("/wishlistremove", requireAuth, shopControllers.postWishlistRemove)
